@@ -10,14 +10,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Lending\\": "src/"
+            "davedev\\Lending\\": "src/"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Lending\\Commands\\LendingServiceProvider"
-            ]
+    "extra": {},
+    "autoload-dev": {
+        "psr-4": {
+            "davedev\\Lending\\Tests\\": "tests/"
         }
     },
     "require-dev": {
