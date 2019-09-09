@@ -1,6 +1,6 @@
 <?php
 
-namespace davedev\Lending;
+namespace davedev\Lending\Entities;
 
 use Illuminate\Database\Eloquent\Model as IlluminateModel;
 
