@@ -1,0 +1,26 @@
+{
+    "name": "davedev/lending",
+    "description": "Lending System Package for Laravel",
+    "authors": [
+        {
+            "name": "suicodave",
+            "email": "suico.dave@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Lending\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lending\\Commands\\LendingServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0"
+    }
+}
