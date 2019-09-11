@@ -7,6 +7,8 @@ use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase
 {
+    protected $loanRepository;
+
     protected function getPackageProviders($app)
     {
         return [
@@ -19,6 +21,8 @@ class TestCase extends OrchestraTestCase
         parent::setUp();
 
         $this->withFactories(__DIR__ . '/../database/factories');
+
+        $this->loanRepository = $this->app->make('davedev\Lending\Repositories\LoanRepository');
     }
 
     protected function getEnvironmentSetUp($app)

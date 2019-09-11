@@ -6,6 +6,7 @@ $factory->define(Loan::class, function (Faker\Generator $faker) {
     return [
         'customer_id' => $faker->randomNumber(),
         'principal_amount' => $faker->randomNumber(5),
-        'term' => $faker->numberBetween(1, 60)
+        'term' => $faker->numberBetween(1, 60),
+        'annual_interest_rate'=>$faker->numberBetween(0,50)
     ];
 });

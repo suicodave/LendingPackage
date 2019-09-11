@@ -10,17 +10,23 @@ use Illuminate\Support\Facades\Log;
 class LoanTest extends TestCase
 {
     use RefreshDatabase;
+
+
     /** 
      * @test
      */
-    function canCreateLoanWithFactory()
+    function canCreateLoanWithRepository()
     {
-        $loan = factory(Loan::class)->create();
+        $loanAttributes = factory(Loan::class)->make()->toArray();
 
-        Log::info($loan);
+        $loan = $this->loanRepository->create($loanAttributes);
 
-        dd($loan);
+        $loans = Loan::all();
 
-        $this->assertCount(1, Loan::all());
+        $this->assertCount(1, $loans);
+
+        $this->assertTrue($loans[0]->id == $loan->id);
+
+        $this->assertContains($loan->toArray(), $loans->toArray());
     }
 }

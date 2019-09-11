@@ -12,6 +12,7 @@ class CreateLoanTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('customer_id');
             $table->unsignedDecimal('principal_amount', 65, 2);
+            $table->unsignedSmallInteger('annual_interest_rate');
             $table->smallInteger('term');
             $table->timestamps();
 
