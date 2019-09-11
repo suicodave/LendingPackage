@@ -8,6 +8,7 @@ class Loan extends Model
         'customer_id',
         'principal_amount',
         'term',
-        'annual_interest_rate'
+        'annual_interest_rate',
+        'user_id'
     ];
 }

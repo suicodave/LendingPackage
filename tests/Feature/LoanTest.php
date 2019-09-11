@@ -30,5 +30,7 @@ class LoanTest extends TestCase
         $this->assertContains($loan->toArray(), $loans->toArray());
 
         $this->assertDatabaseHas('loans', $loan->toArray());
+
+        $this->assertArrayHasKey('user_id', $loan->toArray());
     }
 }
