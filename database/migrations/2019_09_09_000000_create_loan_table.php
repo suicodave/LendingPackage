@@ -11,8 +11,8 @@ class CreateLoanTable extends Migration
         Schema::create('loans', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('customer_id');
-            $table->unsignedDecimal('principal_amount', 65, 2);
-            $table->unsignedSmallInteger('annual_interest_rate');
+            $table->unsignedDecimal('principal_amount');
+            $table->unsignedDecimal('annual_interest_rate');
             $table->unsignedSmallInteger('term');
             $table->unsignedInteger('user_id');
             $table->string('branch_id', 30);

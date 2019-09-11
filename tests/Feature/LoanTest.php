@@ -23,6 +23,10 @@ class LoanTest extends TestCase
 
         $loans = Loan::all();
 
+        Log::info($loan->toArray());
+
+        Log::info($loans->toArray());
+
         $this->assertCount(1, $loans);
 
         $this->assertTrue($loans[0]->id == $loan->id);
