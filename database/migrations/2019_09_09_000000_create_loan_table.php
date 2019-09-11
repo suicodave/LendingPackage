@@ -15,6 +15,7 @@ class CreateLoanTable extends Migration
             $table->unsignedSmallInteger('annual_interest_rate');
             $table->unsignedSmallInteger('term');
             $table->unsignedInteger('user_id');
+            $table->string('branch_id', 30);
             $table->timestamps();
 
             $table->index('created_at');

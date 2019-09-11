@@ -9,6 +9,7 @@ class Loan extends Model
         'principal_amount',
         'term',
         'annual_interest_rate',
-        'user_id'
+        'user_id',
+        'branch_id'
     ];
 }
